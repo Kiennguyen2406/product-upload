@@ -90,7 +90,7 @@ public class ProductController {
         String filename = file.getOriginalFilename();
 
         try {
-            FileCopyUtils.copy(filename.getBytes(),new File(upload+filename));
+            FileCopyUtils.copy(file.getBytes(),new File(upload+filename));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
